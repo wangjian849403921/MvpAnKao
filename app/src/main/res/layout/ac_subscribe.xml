@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_header"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.mvpankao.widget.CircleProgressView
+            android:id="@+id/circle_progress"
+            android:layout_width="@dimen/circle_progress_view_default_size"
+            android:layout_height="@dimen/circle_progress_view_default_size"
+            android:layout_gravity="center"
+            app:Prog_barColor="@color/colorPrimary"
+            app:Prog_barWidth="@dimen/circle_progress_view_default_border_width"/>
+
+        <LinearLayout
+            android:id="@+id/LL_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/Rl_Select"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right">
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/dowmarrow"
+                        android:gravity="center"
+                        android:text="2016"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/dowmarrow"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/eyesarrow"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ccc"
+                    />
+            </LinearLayout>
+
+            <ExpandableListView
+                android:id="@+id/explistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="0.0dip"
+                android:cacheColorHint="@null"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:dividerHeight="0.5dp"
+                android:drawSelectorOnTop="false"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="true"
+                android:groupIndicator="@null"
+                android:scrollbars="none"
+                android:scrollingCache="true"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

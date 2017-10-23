@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:id="@+id/header"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/appcolor"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="70dp"
+        android:layout_height="45dp">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/left_title"
+
+            android:src="@drawable/icon_return"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="@dimen/title_size"/>
+
+    <RelativeLayout
+        android:id="@+id/Rl_Select"
+        android:layout_width="100dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/Select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/dowmarrow"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="筛选"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/dowmarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/drop_down"/>
+    </RelativeLayout>
+</RelativeLayout>
+

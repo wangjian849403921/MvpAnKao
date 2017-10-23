@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_header"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mvpankao.widget.CircleProgressView
+            android:id="@+id/circle_progress"
+            android:layout_width="@dimen/circle_progress_view_default_size"
+            android:layout_height="@dimen/circle_progress_view_default_size"
+            android:layout_gravity="center"
+            app:Prog_barColor="@color/colorPrimary"
+            app:Prog_barWidth="@dimen/circle_progress_view_default_border_width"/>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/workdetail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/about_us"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f3f3f4"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/workflow_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="江苏省电力公司南京供电公司110KV htl005"
+                        android:textColor="#333"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/workflow_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/workflow_number"
+                        android:layout_alignParentRight="true"
+
+                        android:layout_marginRight="10dp"
+                        android:text="2016-11-23 14:23"
+                        android:textColor="#999"
+                        android:textSize="11sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/workflow_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/workflow_name"
+                        android:layout_below="@+id/workflow_name"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="工作流编号：84554441"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/responsiblePerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/workflow_number"
+                        android:layout_below="@+id/workflow_number"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+
+                        />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/lv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@null"
+                    android:divider="@null">
+                </ListView>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

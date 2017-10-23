@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="安靠智能输电"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_size"/>
+
+            <RelativeLayout
+                android:id="@+id/contact_Customer_service"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|right"
+
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/supervisory_control"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v4.widget.DrawerLayout
+
+            android:id="@+id/id_drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <!--<include layout="@layout/home_header"/>-->
+
+            <com.mvpankao.widget.MyScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f9f9f9"
+                android:fillViewport="true"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        app:indicator_drawable_selected="@drawable/shape"
+                        app:indicator_drawable_unselected="@drawable/shape2"
+                        app:indicator_height="8dp"
+                        app:indicator_margin="5dp"
+                        app:indicator_width="8dp"
+
+                        app:title_textcolor="@color/colorPrimary"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_technologyshare"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/KnowledgeForum"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+
+
+                                android:gravity="center"
+                                android:text="电力知识论坛"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log01"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:background="#f0f0f0"
+                            android:paddingBottom="10dp"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/TestOrder"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+
+                                android:gravity="center"
+                                android:text="输电系统科研性实验预约"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log02"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_projectsupervision"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/install_search"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+
+
+                                android:gravity="center"
+                                android:text="国网标准和通用安装工艺\n查询"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log03"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:background="#dddddd"
+                            android:paddingBottom="10dp"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/project_supervision"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+
+                                android:gravity="center"
+                                android:text="工程现场监理功能"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log04"
+                                />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_diagnosis"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/ControlforOnline"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="电力资产在线管理\n(千里眼)"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log05"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:background="#dddddd"
+                            android:paddingBottom="10dp"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/ReportQuery"
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="电缆线路诊断报告查询"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log06"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:background="#dddddd"
+                            android:paddingBottom="10dp"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/diagnosis"
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="电力故障诊断分析共享平台"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/shape3"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_repair"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/repair_line"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+
+                                android:gravity="center"
+                                android:text="输电线路报修"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log07"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:background="#dddddd"
+                            android:paddingBottom="10dp"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/ProductOrder"
+
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="输电线路备品备件订购系统"
+                                android:textColor="@color/HomepageMenuTextColor"
+                                android:textSize="@dimen/homepage_menuTextSize"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/log08"
+                                />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+
+                    <!--&gt;-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/SystemControl"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!---->
+                    <!--android:gravity="center"-->
+                    <!--android:text="系统监控"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/TestOrder"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="实验预约"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/ReportQuery"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="报告查询"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/FaultRepair"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="故障报修"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<Space-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:background="@color/white"-->
+                    <!--/>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:orientation="horizontal"-->
+                    <!--&gt;-->
+
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/ProjectCheck"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="工程质检"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/ProductOrder"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="产品订购"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/KnowledgeForum"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="知识论坛"-->
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/CompanyAptitude"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableBottom="@drawable/shape3"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="企业资质"-->
+
+                    <!--android:textColor="@color/HomepageMenuTextColor"-->
+                    <!--android:textSize="@dimen/homepage_menuTextSize"-->
+                    <!--/>-->
+                    <!--</LinearLayout>-->
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:background="#f0f0f0"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/product_icon"
+
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="产品专题"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/more_products"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical|right"
+                            android:drawablePadding="10dp"
+
+                            android:drawableRight="@drawable/icon_jump"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="查看所有产品"
+                            android:textColor="#a8a8a8"
+                            android:textSize="13sp"
+                            />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#f3f3f3"
+                        />
+
+                    <com.camnter.easyslidingtabs.widget.EasySlidingTabs
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp"
+
+                        app:easyIndicatorDrawable="@drawable/tab_line"
+                        app:easySelectedTagTextColor="@color/colorPrimary"
+                        app:easyTabTextColor="#000"
+                        app:easyUnderlineColor="#00ffffff"/>
+
+                    <!--<android.support.design.widget.TabLayout-->
+                    <!--android:id="@+id/tabs"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="#fff"-->
+                    <!--app:tabIndicatorColor="@color/colorPrimary"-->
+
+                    <!--app:tabSelectedTextColor="@color/colorPrimary"-->
+                    <!--app:tabTextAppearance="@style/MyTabLayoutTextAppearanceInverse"-->
+                    <!--app:tabTextColor="#000"/>-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#f9f9f9"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF">
+                        <!--可滑动的布局内容-->
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/vp_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:background="#fff"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/ll_dot"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="8dp"
+                            android:background="#f8f8f8"
+                            android:gravity="center"
+                            android:orientation="horizontal"/>
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--&gt;-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:drawableLeft="@drawable/photo_delete"-->
+
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="新闻资讯"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="13sp"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/more_information"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_gravity="center_vertical|right"-->
+                    <!--android:drawablePadding="10dp"-->
+
+                    <!--android:drawableRight="@drawable/icon_next_step"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="了解更多"-->
+                    <!--android:textColor="#C6C6C6"-->
+                    <!--android:textSize="13sp"-->
+                    <!--/>-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0.5dp"-->
+                    <!--android:background="#f3f3f3"-->
+                    <!--/>-->
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/recyclerView"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"/>-->
+                </LinearLayout>
+            </com.mvpankao.widget.MyScrollView>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/id_nv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="#fff"
+                android:fitsSystemWindows="true"
+                />
+        </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+
+    <!--<com.hitomi.cmlibrary.CircleMenu-->
+    <!--android:id="@+id/circle_menu"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:layout_gravity="bottom|right"/>-->
+</FrameLayout>
+

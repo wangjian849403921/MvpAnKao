@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        android:text="平台选择"
+        android:textColor="@color/centerTextColor"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:background="#dddddd"
+        />
+
+    <TextView
+        android:id="@+id/technology"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="30dp"
+        android:textSize="17sp"
+        android:textColor="@color/centerTextColor"
+        android:drawableLeft="@drawable/technology_icon"
+        android:text="电力技术“技”共享"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="40dp"
+        android:background="#dddddd"
+        />
+
+    <TextView
+        android:id="@+id/project"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="55dp"
+        android:textSize="17sp"
+        android:gravity="center_vertical"
+        android:drawablePadding="30dp"
+        android:textColor="@color/centerTextColor"
+        android:drawableLeft="@drawable/supervisor_icon"
+        android:text="工程质量“监”共享"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="40dp"
+        android:background="#dddddd"
+        />
+
+    <TextView
+        android:id="@+id/fault_diagnosis"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="25dp"
+        android:textSize="17sp"
+        android:textColor="@color/centerTextColor"
+        android:drawableLeft="@drawable/diagnosis_icon"
+        android:text="故障诊断“诊”共享"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="40dp"
+        android:background="#dddddd"
+        />
+
+    <TextView
+        android:id="@+id/repair"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="30dp"
+        android:textSize="17sp"
+        android:textColor="@color/centerTextColor"
+        android:drawableLeft="@drawable/repair_icon"
+        android:text="抢修资源“修”共享"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="40dp"
+        android:background="#dddddd"
+        />
+
+</LinearLayout>

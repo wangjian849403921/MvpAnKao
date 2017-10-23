@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mvpankao">
+    <!-- The "android:required" attribute was added in API level 5 (Android 2.0) -->
+    <uses-library
+        android:name="com.google.android.maps"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 网络权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name=".ui.HomeActivity"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!--登录activity-->
+        <activity android:name=".ui.activity.LoginActivity"/>
+        <activity android:name=".mvp.login.LoginActivity"/>
+        <!--设置activity-->
+        <activity android:name=".ui.activity.SettingActivity"/>
+        <!--反馈activity-->
+        <activity android:name=".ui.activity.FeedBackActivity"/>
+        <!--关于安靠activity-->
+        <activity android:name=".ui.activity.AboutUsActivity"/>
+        <!--产品筛选结果activity-->
+        <activity android:name=".ui.activity.ProductActivity"/>
+        <!--产品详情activity-->
+        <activity android:name=".ui.activity.ProductDetailActivity"/>
+        <!--订购产品activity-->
+        <activity android:name=".ui.activity.ProductsOrderActivity"/>
+        <!--我的订购activity-->
+        <activity android:name=".ui.activity.MyOrderActivity"/>
+        <!--我的订购详情activity-->
+        <activity android:name=".ui.activity.OrderDetailActivity"/>
+        <!--新闻资讯详情activity-->
+        <activity android:name=".ui.activity.NewsDetailsActivity"/>
+        <!--地址列表activity-->
+        <activity android:name=".ui.activity.AddressActivity"/>
+        <!--编辑地址activity-->
+        <activity android:name=".ui.activity.EditAddressActivity"/>
+        <!--创建地址activity-->
+        <activity android:name=".ui.activity.NewAddressActivity"/>
+        <!--购物车activity-->
+        <activity android:name=".ui.activity.ShopCarActivity"/>
+        <!--提交订单activity-->
+        <activity android:name=".ui.activity.CommitOrderActivity"/>
+        <!--工作流activity-->
+        <activity android:name=".ui.activity.WorkFlowActivity"/>
+        <activity android:name=".mvp.workflow.WorkFlowActivity"/>
+        <!--工作流详情activity-->
+        <activity android:name=".ui.activity.WorkFlowDetailActivity"/>
+        <!--工作流详情activity-->
+        <activity android:name=".ui.activity.WorkFlowDetailActivity2"/>
+        <activity android:name=".mvp.workflow.WorkFlowDetailActivity"/>
+        <!--上传图片activity-->
+        <activity
+            android:name=".ui.activity.UploadTaskActivity"
+            android:launchMode="standard"
+            />
+        <!--工作流步骤activity-->
+        <activity android:name=".ui.activity.StepListActivity"/>
+        <!--工作流步骤详情activity-->
+        <activity android:name=".ui.activity.StepDetailActiviry"/>
+        <!--图片activity-->
+        <activity android:name=".ui.activity.PictureDetailActivity"/>
+        <!--我的报修activity-->
+        <activity android:name=".ui.activity.MyRepairActivity"/>
+        <!--我的报修详情activity-->
+        <activity android:name=".ui.activity.RepairDetailActivity"/>
+        <!--提交故障报修activity-->
+        <activity android:name=".ui.activity.FaultRepairActivity"/>
+        <!--我的预约activity-->
+        <activity android:name=".ui.activity.MySubscribeActivity"/>
+        <!--知识论坛activity-->
+        <activity android:name=".ui.activity.KnowledgeForuActivity"/>
+        <!--实验预约activity-->
+        <activity android:name=".ui.activity.ExperimentalAppointmentActivity"/>
+        <!--报告查询activity-->
+        <activity android:name=".ui.activity.QueryReportsActivity"/>
+        <!--工艺查询activity-->
+        <activity android:name=".ui.activity.QueryTechnologyActivity"/>
+        <!--千里眼activity-->
+        <activity android:name=".ui.activity.TelescopeActivity"/>
+        <!--工单详情activity-->
+        <activity android:name=".ui.activity.WorkOrderDetailActivity"/>
+        <!--创建工单activity-->
+        <activity android:name=".ui.activity.CreateWorkOrderActivity"/>
+        <!--创建工单activity-->
+        <activity android:name=".ui.activity.CreateWorkOrderActivity2"/>
+        <!--编辑工单activity-->
+        <activity android:name=".ui.activity.EditWorkOrderActivity"/>
+        <!--编辑工单内容activity-->
+        <activity android:name=".ui.activity.EditOrderContentActivity"/>
+        <!--工单筛选结果activity-->
+        <activity android:name=".ui.activity.WorkOrderSearchActivity"/>
+        <!--工单日志activity-->
+        <activity android:name=".ui.activity.LogActivity"/>
+        <!--工单日志详情activity-->
+        <activity android:name=".ui.activity.LogDetailActiviry"/>
+        <!--创建工单日志activity-->
+        <activity android:name=".ui.activity.CreateLogActivity"
+
+            />
+        <!--工单资产activity-->
+        <activity android:name=".ui.activity.AssetAreaActivity"/>
+        <!--警报详情activity-->
+        <activity android:name=".ui.activity.WarningDeatilActivity"/>
+        <!--警报筛选结果activity-->
+        <activity android:name=".ui.activity.WarningSearchActivity"/>
+        <!--创建警报工单activity-->
+        <activity android:name=".ui.activity.CreateWarningOrderActivity"/>
+        <!--资产详情activity-->
+        <activity android:name=".ui.activity.AssetDetailActivity"/>
+        <!--资产参数activity-->
+        <activity android:name=".ui.activity.ParentActivity"
+
+            />
+
+    </application>
+
+</manifest>

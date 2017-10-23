@@ -1,0 +1,701 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+    /*font: normal normal 16px "微软雅黑";*/
+    color: #121212;
+}
+body {
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    cursor: default;
+}
+#main {
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+    background: white;
+}
+li {
+    list-style: none;
+}
+#main:after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.captionBox {
+    height: 42px;
+    padding: 0 15px;
+    position: relative;
+}
+.captionBoxBorder {
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, white), color-stop(0.5, #e8e8e8));
+}
+.border {
+    height: 1px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, white), color-stop(0.5, #e8e8e8));
+}
+.calendarIcon {
+    width: 15px;
+    height: 17px;
+    background: url("../images/icon_calendar.png");
+    background-size: contain;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    margin-top: -9px;
+}
+.calendarYearBtnBox {
+    width: 80px;
+    height: 42px;
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+.calendarYearBtnBox > span {
+    display: block;
+    width: 60px;
+    height: 42px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #1bbc9b;
+    line-height: 42px;
+    text-align: right;
+    float: left;
+}
+.calendarYearBtnBox > i {
+    display: block;
+    width: 10px;
+    height: 42px;
+    background: url("../images/icon_arrow_bottom.png") center center no-repeat;
+    background-size: contain;
+    float: right;
+}
+.calendarText {
+    width: 90px;
+    height: 42px;
+    position: absolute;
+    left: 40px;
+    line-height: 42px;
+    color: #333333;
+    font-size: 12px;
+}
+.calendarSelectYearBox {
+    width: 130px;
+    height: 170px;
+    background-size: contain;
+    position: absolute;
+    top: 34px;
+    right: 3px;
+    z-index: 200;
+    box-shadow: 0 0 8px 1px #eafefa;
+    border-radius: 6px;
+    display: none;
+}
+.calendarSelectYearBg {
+    width: 130px;
+    height: 150px;
+    padding: 15px 0 10px 0;
+    background: url("../images/calendar_year_bg.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    z-index: 200;
+}
+#calendarSelectYearBox {
+    width: 130px;
+    height: 150px;
+    overflow-y: auto;
+}
+#calendarSelectYearBox > li {
+    height: 45px;
+    padding: 0 10px;
+}
+#calendarSelectYearBox > li.current {
+    background: #1bbc9b;
+}
+#calendarSelectYearBox > li > a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+}
+#calendarSelectYearBox > li > a.current {
+    color: #fff;
+}
+.selectDaysAndMonthBox {
+    height: 40px;
+    margin-top: 16px;
+    position: relative;
+}
+.monthFirstDay {
+    width: 26px;
+    height: 10px;
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+    line-height: 10px;
+    position: absolute;
+    top: 8px;
+    left: -4px;
+}
+.currentMonthDay {
+    font-size: 7px;
+    color: #f00;
+    width: 48px;
+    height: 12px;
+    text-align: center;
+    line-height: 10px;
+    position: absolute;
+    bottom: 0;
+}
+#selectDaysBox {
+    height: 40px;
+    width: 120px;
+    padding-left: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #f3f3f3;
+    line-height: 40px;
+    font-size: 14px;
+    color: #333333;
+}
+#selectDays {
+    color: #1bbc9b;
+}
+.selectMonthBox {
+    width: 126px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 6px;
+}
+#selectMonthLeftBtn, #selectMonthRightBtn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+}
+#selectMonthLeftBtn {
+    background: url("../images/icon_arrow_left.png") center center no-repeat;
+    background-size: contain;
+    left: 0;
+}
+#selectMonthRightBtn {
+    background: url("../images/icon_arrow_right.png") center center no-repeat;
+    background-size: contain;
+    right: 0;
+}
+#monthNum {
+    width: 46px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    left: 40px;
+}
+#calendarBox {
+    /*height: 296px;*/
+    margin: 10px auto;
+    position: relative;
+}
+#week {
+    padding: 0 10px;
+    height: 27px;
+    width: 340px;
+}
+#week>li {
+    width: 48px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    float: left;
+}
+#calendar {
+    margin: 0 10px;
+    width: 336px;
+    height: 300px;
+    position: relative;
+    z-index: 100;
+}
+#calendar>li {
+    width: 48px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    float: left;
+    color: #999999;
+    position: relative;
+    font-size: 14px;
+}
+#calendar>li.currentMonthDay {
+    color: #333333;
+}
+#calendar>li.current {
+    color: #fff;
+}
+#calendar>li.currentDay {
+    color: red;
+}
+#calendar>li.lastCol,#week>li.lastCol {
+}
+#calendar>li.bottom {
+}
+#drawBox,#defDrawBox {
+    width: 340px;
+    padding: 0 10px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    top: 27px;
+}
+#defDrawBox {
+    z-index: 1;
+    background: #f9f9f9;
+}
+.daySelectShadow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#bufferBox, #promptBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+#promptBox {
+    display: none;
+}
+#bufferIcon {
+    width: 90px;
+    height: 90px;
+    background: url("../images/loding.png");
+    background-size: contain;
+    animation: loading ease 1.8s infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -45px -45px;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(360deg);
+    }
+}
+.daySelectListBox,.prompt {
+    width: 320px;
+    height: 270px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: -135px;
+    margin-left: -160px;
+}
+.dayListBox {
+    width: 100%;
+    height: 191px;
+    padding: 12px 0;
+}
+#selectDayBtn, #promptBtn {
+    width: 100%;
+    height: 55px;
+    background: #1bbc9b;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
+}
+#dayList, #promptContent {
+    width: 100%;
+    height: 191px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 100;
+}
+.currentDayBorder {
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    top: 84px;
+}
+.topBorder {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.bottomBorder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.needTitle {
+    width: 76px;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 47px;
+    color: #333;
+    font-size: 14px;
+}
+.unit {
+    width: 20px;
+    height: 47px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 47px;
+    color: #333;
+    font-size: 14px;
+}
+#dayList>li {
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    color: #9a9a9a;
+    font-size: 19px;
+}
+#dayList>li.current {
+    color: #333;
+}
+#dayList>li.scale1 {
+    font-size: 17px;
+}
+#dayList>li.scale2 {
+    font-size: 14px;
+}
+#dayList>li.top,#dayList>li.bottom {
+    height: 73px;
+}
+.timeShowBox{
+    width: 100%;
+    height: 80px;
+    margin: 0 auto 10px;
+    position: relative;
+}
+.startTimeBox{
+    position: absolute;
+    width: 50%;
+    height: 80px;
+    margin: 0;
+}
+.startTimePoint{
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #0078ff;
+    border-radius: 3px;
+    position: absolute;
+    top: 4px;
+    /*alignment: center;*/
+}
+.selectStartPoint, .selectEndPoint {
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -3px;
+}
+.selectStartPoint {
+    background: #0078ff;
+    z-index: 10;
+}
+.selectEndPoint {
+    background: #fd7e46;
+}
+#startTimeLabel{
+    left: 50%;
+    margin-left: -31px;
+    position: absolute;
+    font-size: 13px;
+    width: 62px;
+    height: 14px;
+    line-height: 14px;
+    top: 21px;
+    text-align: right;
+}
+#startTime{
+    color: #1bbc9b;
+    left: 50%;
+    margin-top: 36px;
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    width: 120px;
+    margin-left: -60px;
+}
+.middleLine{
+    position: absolute;
+    width: 0.5px;
+    height: 30px;
+    left: 50%;
+    margin-top: 27.5px;
+    background-color: #dddddd;
+}
+.endTimeBox{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    height: 80px;
+    margin-top: 0px;
+}
+.endTimePoint{
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #fd7e46;
+    border-radius: 3px;
+    position: absolute;
+    top: 4px;
+    /*alignment: center;*/
+}
+#endTimeLabel{
+    left: 50%;
+    margin-left: -31px;
+    position: absolute;
+    font-size: 13px;
+
+    width: 62px;
+    height: 14px;
+    line-height: 14px;
+    top: 21px;
+    text-align: right;
+}
+#endTime{
+    color: #1bbc9b;
+    left: 50%;
+    margin-top: 36px;
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    width: 120px;
+    margin-left: -60px;
+}
+.timeShowBottomLine{
+    position: absolute;
+    margin-top: 79px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    display: block;
+    /*background-color: #999999;*/
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, white), color-stop(0.8, #999999));
+}
+.chooseTypeBox{
+    /*position: absolute;*/
+    /*left: 50%;*/
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 325px;
+    height: 50px;
+    border: 1px solid #1bbc9b;
+    border-radius: 5px;
+    line-height: 50px;
+    color: #999999;
+    padding-left: 5px;
+    background: url("../images/order_bottom_btn.png") no-repeat 300px center;
+    background-size: contain;
+}
+.chooseTypeTable{
+    position: absolute;
+    height: 131px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 332px;
+    background: url("../images/calendar_type_bg.png") no-repeat 0 center;
+    background-size: contain;
+    color: #121212;
+    display: none;
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+.chooseTypeTBox {
+    height: 131px;
+    width: 332px;
+    overflow-y: auto;
+}
+.typeList>li{
+    padding-left: 15px;
+}
+.typeList>li.current {
+    background: #1bbc9b;
+    color: #fff;
+}
+.typeList>li>p.current {
+    color: #fff;
+}
+.typeList{
+    line-height: 50px;
+    font-size: 16px;
+    margin-left: 1px;
+    /*padding-top: 15px;*/
+    width: 330px;
+}
+.line1{
+    /*position: absolute;*/
+    display: block;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 1px;
+    /*background-color: #999999;*/
+    width: 300px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, white), color-stop(0.8, #999999));
+
+}
+.describeBox{
+    /*position: absolute;*/
+    /*left: 50%;*/
+    margin-left: 15px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    width: 310px;
+    height: 150px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    line-height: 20px;
+    color: #999999;
+    font-size: 16px;
+    outline: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-select: auto;
+    overflow: auto;
+
+}
+.orderPersonBox{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 25px;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+    width: 305px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+}
+.orderPersonLine{
+    /*position: absolute;*/
+    margin-top: 50px;
+    margin-left: 15px;
+    height: 1px;
+    /*background-color: #999999;*/
+    width: 330px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, white), color-stop(0.8, #999999));
+
+}
+.orderPhone{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 25px;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+    width: 305px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+}
+.orderPhoneLine{
+    margin-top: 50px;
+    margin-left: 15px;
+    height: 1px;
+    /*background-color: #999999;*/
+    width: 330px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, white), color-stop(0.8, #999999));
+
+}
+.commitBtn{
+    position: absolute;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+    width: 310px;
+    height: 50px;
+    background-color: #ff6600;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.currentDrawStyle, .preDrawStyle {
+    background: #1bbc9b;
+    height: 30px;
+    position: absolute;
+    border-radius: 15px;
+}
+.preDrawStyle {
+    background: #d1d1d1;
+}
+.iconBox {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-size: cover;
+}
+.orderCompanyBox{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 25px;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+    width: 305px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.orderCompanyLine{
+    margin-top: 50px;
+    margin-left: 15px;
+    height: 1px;
+    background-color: #999999;
+    width: 330px;
+}
+#promptContent {
+    height: 215px;
+    line-height: 215px;
+    font-size: 16px;
+    text-align: center;
+}

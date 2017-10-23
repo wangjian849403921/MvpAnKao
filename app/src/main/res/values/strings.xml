@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">输电无忧</string>
+    <string name="home">首页</string>
+    <string name="products">产品中心</string>
+    <string name="myreport">我的报告</string>
+    <string name="news">新闻资讯</string>
+    <string name="corporate_center">用户中心</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+</resources>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login_headericon"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="135dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ankao_log"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_loginname"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/inputselect_shap"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_loginname"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@color/colorPrimary"
+                >
+
+                <ImageView
+                    android:id="@+id/login_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/loginname_icon"
+
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#e8e8e8"
+                />
+
+            <com.mvpankao.widget.ClearEditText
+                android:id="@+id/LoginName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:ems="300"
+                android:hint="请输入您的账号"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#090059"
+                android:textColorHint="#b6b6b6"
+                android:textSize="@dimen/title_size"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_loginpassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="380dp"
+            android:background="@drawable/inputselect_shap"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_loginpassword"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@color/colorPrimary"
+                >
+
+                <ImageView
+                    android:id="@+id/loginpassword_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/password_icon"
+
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#e8e8e8"
+                />
+
+            <com.mvpankao.widget.ClearEditText
+                android:password="true"
+                android:id="@+id/LoginPassWord"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:ems="300"
+                android:hint="请输入您的密码"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#090059"
+                android:textColorHint="#b6b6b6"
+                android:textSize="@dimen/title_size"
+                />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="510dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="2dp"
+
+            app:cardElevation="5dp">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/forgetpassword"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="590dp">
+
+            <TextView
+                android:id="@+id/forgetpasswordtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+
+                android:gravity="center"
+                android:text="忘记密码？"
+                android:textColor="#999999"
+                android:textSize="13sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignLeft="@+id/forgetpasswordtext"
+                android:layout_alignRight="@+id/forgetpasswordtext"
+                android:layout_below="@+id/forgetpasswordtext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#999999"/>
+        </RelativeLayout>
+    </FrameLayout>
+</ScrollView>

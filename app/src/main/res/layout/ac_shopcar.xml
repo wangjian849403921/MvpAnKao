@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/shopcar_header"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/ShopCarList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:divider="@null"
+            />
+
+        <LinearLayout
+            android:id="@+id/id_rl_foot"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+
+                >
+
+
+                <com.mvpankao.widget.SmoothCheckBox
+                    android:id="@+id/cb_SelectAll"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.69"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:text="全选"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ensure_order"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColor"
+                android:gravity="center"
+
+                android:text="确认订单"
+                android:textColor="#FFF"
+                android:textSize="@dimen/center_size"/>
+
+
+            <TextView
+                android:id="@+id/order_delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColor2"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#fff"
+                android:textSize="@dimen/center_size"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

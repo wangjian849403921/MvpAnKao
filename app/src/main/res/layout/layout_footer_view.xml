@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer_view"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_footer_view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_progress"-->
+        <!--android:layout_width="34dp"-->
+        <!--android:layout_height="34dp"-->
+        <!--android:layout_gravity="center"-->
+
+        <!--android:src="@drawable/refresh_loding"/>-->
+
+        <ProgressBar
+            android:id="@+id/footer_view_progressbar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_normal_refresh_footer_status"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_toRightOf="@+id/iv_progress"
+            android:gravity="center_vertical"
+            android:text="加载中,请稍候..."
+            android:textColor="#777"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/footer_view_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

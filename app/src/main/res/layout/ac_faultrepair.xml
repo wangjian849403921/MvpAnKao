@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/repairicon"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="请填写报修单"
+                android:textSize="@dimen/center_size"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c8c8"
+                />
+
+            <RelativeLayout
+                android:id="@+id/TypeSelect"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/frame">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="故障类型"
+                    android:textColor="@color/HomepageMenuTextColor"
+                    />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="请选择故障类型"
+                    android:textColor="#c8c8c8"
+
+                    />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/eyesarrow"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/frame">
+
+
+                <EditText
+                    android:id="@+id/Remarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:ems="300"
+                    android:hint="备注"
+                    android:gravity="top"
+                    android:textColorHint="#cbcbcb"
+
+                    android:textSize="15sp"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:divider="@drawable/line"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="20dp"
+                android:showDividers="middle|end">
+
+
+                <com.mvpankao.widget.ClearEditText
+                    android:id="@+id/LineName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/center_TextHeight"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    android:ems="300"
+                    android:gravity="center_vertical"
+                    android:hint="请填写线路名称"
+
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@color/centerTextColor"
+                    android:textSize="@dimen/center_size"
+                    />
+
+                <TextView
+                    android:id="@+id/Area"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/center_TextHeight"
+                    android:background="#fff"
+
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/icon_next_step"
+                    android:gravity="center_vertical"
+                    android:hint="选择所在地区"
+                    android:textColor="@color/centerTextColor"
+                    android:textSize="@dimen/center_size"
+                    />
+
+                <com.mvpankao.widget.ClearEditText
+                    android:id="@+id/AddressDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/center_TextHeight"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    android:ems="300"
+                    android:gravity="center_vertical"
+                    android:hint="请填写详细地址"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@color/centerTextColor"
+                    android:textSize="@dimen/center_size"
+                    />
+
+                <com.mvpankao.widget.ClearEditText
+                    android:id="@+id/Company"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/center_TextHeight"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    android:ems="300"
+                    android:gravity="center_vertical"
+                    android:hint="请填写单位"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@color/centerTextColor"
+                    android:textSize="@dimen/center_size"
+                    />
+
+                <com.mvpankao.widget.ClearEditText
+                    android:id="@+id/FaultRepairName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/center_TextHeight"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    android:ems="300"
+                    android:gravity="center_vertical"
+                    android:hint="请填写联系人员"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@color/centerTextColor"
+                    android:textSize="@dimen/center_size"
+                    />
+
+                <com.mvpankao.widget.ClearEditText
+                    android:id="@+id/ContactWay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/center_TextHeight"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    android:ems="300"
+                    android:gravity="center_vertical"
+                    android:hint="请填写联系方式"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/centerTextColor"
+                    android:textSize="@dimen/center_size"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/commit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

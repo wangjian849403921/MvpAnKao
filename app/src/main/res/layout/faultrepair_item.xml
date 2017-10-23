@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+
+        <TextView
+            android:id="@+id/repair_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginTop="10dp"
+
+            android:text=""
+            android:textColor="#a8a8a8"
+            android:textSize="15sp"
+
+            />
+
+        <TextView
+            android:id="@+id/repair_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/repair_title"
+            android:layout_below="@+id/repair_title"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxEms="12"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#333"
+            android:textSize="15sp"
+
+            />
+
+        <TextView
+            android:id="@+id/repair_statue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/repair_title"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="11sp"
+
+            />
+
+        <TextView
+            android:id="@+id/repair_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:text="2016-08-02"
+            android:textColor="#999999"
+            android:textSize="12sp"
+
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e8e8e8"
+        />
+</LinearLayout>

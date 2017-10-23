@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角Imageview -->
+    <declare-styleable name="ShapeImageView">
+        <attr name="shape_mode" format="enum">
+            <enum name="shape" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="round_radius" format="dimension" />
+        <attr name="frame_width" format="dimension" />
+        <attr name="frame_color" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SegmentControl">
+        <attr name="cornerRadius" format="dimension|reference"/>
+        <attr name="colors" format="color|reference"/>
+        <attr name="textSelectedColors" format="color|reference"/>
+        <attr name="texts" format="string|reference"/>
+        <attr name="android:textSize"/>
+        <attr name="direction" format="enum">
+            <enum name="horizon" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <!-- 外部边框的width -->
+        <attr name="boundWidth" format="dimension|reference"/>
+        <!-- 内部边框的width -->
+        <attr name="separatorWidth" format="dimension|reference"/>
+        <attr name="gaps" format="dimension|reference"/>
+        <attr name="horizonGap" format="dimension|reference"/>
+        <attr name="verticalGap" format="dimension|reference"/>
+    </declare-styleable>
+
+    <!-- CircleProgressView -->
+    <declare-styleable name="CircleProgressView">
+        <attr name="Prog_progressIndeterminate" format="boolean"/>
+        <attr name="Prog_barColor" format="color"/>
+        <attr name="Prog_rimColor" format="color"/>
+        <attr name="Prog_rimWidth" format="dimension"/>
+        <attr name="Prog_spinSpeed" format="float"/>
+        <attr name="Prog_barSpinCycleTime" format="integer"/>
+        <attr name="Prog_circleRadius" format="dimension"/>
+        <attr name="Prog_fillRadius" format="boolean"/>
+        <attr name="Prog_barWidth" format="dimension"/>
+        <attr name="Prog_linearProgress" format="boolean"/>
+    </declare-styleable>
+</resources>

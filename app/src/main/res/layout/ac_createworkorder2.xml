@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f4f4f4"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_header"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#fff"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:background="#f4f4f4"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#fff"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="客户名称"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/customerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="溧阳市人民医院"
+                    android:textColor="#999"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="工单类型"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+
+                    android:background="#c8c8c8"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/attendance"
+                            style="@style/CustomCheckboxTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:checked="true"
+                            />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            android:text="现场"
+
+                            android:textColor="#8e8e8e"
+                            android:textSize="14sp"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/business"
+                            style="@style/CustomCheckboxTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:layout_marginLeft="18dp"
+                            android:checked="false"
+                            />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            android:text="随工"
+
+                            android:textColor="#8e8e8e"
+                            android:textSize="14sp"
+                            />
+                    </RadioGroup>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:background="#f4f4f4"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_starttime"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="开始时间"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/starttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginRight="15dp"
+                    android:hint="请选择开始时间"
+                    android:textColor="#999"
+                    android:textSize="16sp"
+                    />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="结束时间"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="请选择结束时间"
+                    android:textColor="#999"
+                    android:textSize="16sp"
+                    />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:background="#f4f4f4"/>
+            android:background="#f4f4f4"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_area"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:id="@+id/textarea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="资产范围"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/assertArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/image"
+                    android:ellipsize="end"
+                    android:hint="请选择"
+                    android:maxEms="8"
+
+                    android:singleLine="true"
+                    android:textColor="#999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_next_step"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:background="#c8c8c8"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_orderTask"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="工单任务"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/orderTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/image3"
+                    android:ellipsize="end"
+                    android:hint="请输入详细内容"
+                    android:maxEms="12"
+                    android:maxLines="1"
+                    android:textColor="#999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_next_step"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#c8c8c8"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_Executor"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#fff"
+
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="执行人"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/executors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/image8"
+                    android:ellipsize="end"
+                    android:hint="请选择执行人"
+                    android:maxEms="8"
+                    android:singleLine="true"
+                    android:textColor="#999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_next_step"
+                    />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="55dp"
+
+                android:background="#c8c8c8"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/orderbtn2"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

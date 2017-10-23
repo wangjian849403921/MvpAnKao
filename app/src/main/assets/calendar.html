@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <link rel="stylesheet" href="css/calendar.css">
+    <script src="js/commonFunction.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/yearSelectFun.js"></script>
+    <script src="js/monthSelectFun.js"></script>
+    <script src="js/daySelectFun.js"></script>
+    <script src="js/jquery-2.0.0.min.js"></script>
+    <script src="js/jsRegex.js"></script>
+    <script src="js/testData.js"></script>
+    <script src="js/getData.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="captionBox">
+            <div class="calendarIcon"></div>
+            <div class="calendarText">选择预约时间：</div>
+            <div class="calendarYearBtnBox">
+                <span id="currentYear">2016年</span>
+                <i></i>
+            </div>
+        </div>
+        <div class="captionBoxBorder"></div>
+        <div class="calendarSelectYearBox">
+            <div class="calendarSelectYearBg">
+                <ul id="calendarSelectYearBox">
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="selectDaysAndMonthBox">
+            <div id="selectDaysBox">
+                <span>选择天数：</span>
+                <span id="selectDays">1</span>
+                <span>天</span>
+            </div>
+            <div class="selectMonthBox">
+                <div id="selectMonthLeftBtn"></div>
+                <div id="selectMonthRightBtn"></div>
+                <div id="monthNum">七月</div>
+            </div>
+        </div>
+
+        <div id="calendarBox">
+            <ul id="week"></ul>
+            <ul id="calendar">
+
+            </ul>
+            <div id="drawBox">
+
+            </div>
+            <!-- 默认预约绘图 -->
+            <div id="defDrawBox">
+
+            </div>
+        </div>
+
+
+        <!-- 我开始写的。。。-->
+        <div class="timeShowBox">
+            <div class="startTimeBox">
+                <div id="startTimeLabel">
+                    <div class="startTimePoint"></div>
+                    开始时间
+                </div>
+                <p id="startTime">2016-12-24</p>
+            </div>
+            <div class="middleLine"></div>
+
+            <div class="endTimeBox">
+                <div id="endTimeLabel">
+                    <div class="endTimePoint"></div>
+                    结束时间
+                </div>
+                <!--<li style="list-style-type: inherit"></li>开始时间<br/>-->
+                <p id="endTime">2017-01-01</p>
+            </div>
+            <div class="timeShowBottomLine"></div>
+        </div>
+        <div class="chooseTypeBox" id-type="0">请选择预约类型</div>
+        <div class="chooseTypeTable">
+            <div class="chooseTypeTBox">
+                <ul class="typeList">
+                    <li id-type="1">
+                        <p>局部放电实验</p>
+                        <a class="line1"></a>
+                    </li>
+                    <li id-type="2">
+                        <p>DTS光纤测温实验</p>
+                        <a class="line1"></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="describeBox" contenteditable="true">请对您的预约进行简要描述</div>
+        <input class="orderCompanyBox" placeholder="预约单位">
+        <div class="orderCompanyLine"></div>
+        <input class="orderPersonBox" placeholder="预约人姓名" maxlength="15">
+        <div class="orderCompanyLine"></div>
+        <input class="orderPhone" placeholder="预约人手机号" maxlength="11">
+        <div class="orderCompanyLine"></div>
+        <button class="commitBtn" onclick="sendDate()">提交申请</button>
+    </div>
+    <div class="daySelectShadow">
+        <div class="daySelectListBox">
+            <div class="dayListBox">
+                <ul id="dayList">
+
+                </ul>
+                <div class="currentDayBorder">
+                    <div class="border topBorder"></div>
+                    <div class="border bottomBorder"></div>
+                    <div class="needTitle">预约天数</div>
+                    <div class="unit">天</div>
+                </div>
+            </div>
+            <div id="selectDayBtn">确认</div>
+        </div>
+    </div>
+    <div id="bufferBox">
+        <div id="bufferIcon">
+
+        </div>
+    </div>
+    <div id="promptBox">
+        <div class="prompt">
+            <div id="promptContent">你哈</div>
+            <div id="promptBtn">确定</div>
+        </div>
+    </div>
+    <script src="js/commonVariables.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chooseTypeFunction.js"></script>
+    <script src="js/sendDate.js"></script>
+</body>
+</html>

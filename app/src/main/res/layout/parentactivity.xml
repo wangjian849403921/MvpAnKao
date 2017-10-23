@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_header"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mvpankao.widget.CircleProgressView
+            android:id="@+id/circle_progress"
+            app:Prog_barColor="@color/colorPrimary"
+            app:Prog_barWidth="@dimen/circle_progress_view_default_border_width"
+            android:layout_width="@dimen/circle_progress_view_default_size"
+            android:layout_height="@dimen/circle_progress_view_default_size"
+            android:layout_gravity="center"/>
+
+        <!--<com.ankaoproject.widget.MyScrollView-->
+            <!--android:id="@+id/scrollView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+
+            <!--&gt;-->
+
+            <LinearLayout
+                android:id="@+id/Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/topimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitCenter"
+
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#f9f9f9"
+                    />
+                <ExpandableListView
+                    android:id="@+id/explistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="0.0dip"
+                    android:cacheColorHint="@null"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null"
+                    android:dividerHeight="0.5dp"
+                    android:drawSelectorOnTop="false"
+                    android:fastScrollEnabled="false"
+                    android:footerDividersEnabled="true"
+                    android:groupIndicator="@null"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"/>
+            </LinearLayout>
+        <!--</com.ankaoproject.widget.MyScrollView>-->
+    </FrameLayout>
+</LinearLayout>
